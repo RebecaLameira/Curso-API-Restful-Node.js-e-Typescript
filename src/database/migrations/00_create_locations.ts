@@ -1,5 +1,5 @@
-import { Knex } from "knex";
-//tabela de criação dos locais
+import Knex from "knex";
+
 export async function up(knex: Knex) {
   return knex.schema.createTable("locations", (table) => {
     table.increments("id").primary();
@@ -13,6 +13,7 @@ export async function up(knex: Knex) {
     table.string("uf").notNullable();
   });
 }
+
 export async function down(knex: Knex) {
   return knex.schema.dropTable("locations");
 }

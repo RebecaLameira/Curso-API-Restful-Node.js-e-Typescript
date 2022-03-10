@@ -1,4 +1,4 @@
-import { knex } from "knex";
+import knex from "knex";
 import path from "path";
 
 const connection = knex({
